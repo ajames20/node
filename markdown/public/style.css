@@ -14,7 +14,6 @@ section,
   overflow: auto;
   outline: none;
   resize: none;
-
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -22,5 +21,7 @@ section,
 
 #markdown {
   overflow: auto;
+  color: #fff;
+  background-color: #2d2932;
   border-left: 1px solid black;
 }
