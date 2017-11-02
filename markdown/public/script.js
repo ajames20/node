@@ -5,7 +5,7 @@ window.onload = function() {
 
   const convertTextAreaToMarkdown = () => {
     const markdownText = pad.value;
-    html = converter.makeHtml(markdownText);
+    const html = converter.makeHtml(markdownText);
     markdownArea.innerHTML = html;
   };
 
