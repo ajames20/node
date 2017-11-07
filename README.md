@@ -21,3 +21,13 @@
 
 open index.html in your favorite broswer
 ```
+
+## Express Homework
+![Express](./assets/express.png)
+
+### Steps to run Neural Network
+```
+~ cd express 
+
+~ npm run start
+```
