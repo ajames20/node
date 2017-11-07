@@ -11,3 +11,13 @@
 ![Javascripting](./assets/learnyounode.png)
 ![Javascripting](./assets/scope.png)
 ![Javascripting](./assets/npm.png)
+
+## Neural Network Homework
+![NeuralNetwork](./assets/neuralnet.png)
+
+### Steps to run Neural Network
+```
+~ cd machinelearning 
+
+open index.html in your favorite broswer
+```
