@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const GenreSchema = Schema({
-  name: { type: String, required: true, min: 3, max: 100 },
+  name: { type: String, required: true, min: 3, max: 100 }
 });
 
-// Virtual for book's URL
+// Virtual for this genre instance URL
 GenreSchema.virtual('url').get(function() {
-  return `/catalog/genres/${this._id}`;
+  return `/catalog/genre/${this._id}`;
 });
 
 // Export model
