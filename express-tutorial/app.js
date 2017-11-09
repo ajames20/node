@@ -4,11 +4,21 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+require('dotenv').config();
 
 const index = require('./routes/index');
 const users = require('./routes/users');
 
 const app = express();
+
+const dbUrl = process.env.DATABASE_URL || 'mongodb://localhost/express-tutorial';
+
+mongoose.createConnection(dbUrl);
+const db = mongoose.connection;
+db.on('error', err => {
+  console.error(`🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 → ${err.message}`);
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
