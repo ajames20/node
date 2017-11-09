@@ -13,10 +13,13 @@ const catalog = require('./routes/catalog');
 
 const app = express();
 
-const dbUrl = process.env.DATABASE_URL || 'mongodb://localhost/express-tutorial';
+const mongoDB = process.env.DATABASE_URL || 'mongodb://localhost/express-tutorial';
+mongoose.connect(mongoDB, {
+  useMongoClient: true,
+});
 
-mongoose.createConnection(dbUrl);
 const db = mongoose.connection;
+
 db.on('error', err => {
   console.error(`🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 → ${err.message}`);
 });
